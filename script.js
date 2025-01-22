@@ -64,7 +64,32 @@ FUNCTION getHumanChoice()
         ELSE WhileKeepGoing = false
             RETURN humanChoice
     WHILE(whileKeepGoing)
- 
+*/
+
+
+function playRound() {
+    if (humanChoice == computerChoice) {
+        console.log(`Draw! Both choose ${humanChoice}!`)
+    }
+
+    else if (   humanChoice == "rock" && computerChoice == "scissors" ||
+                humanChoice == "paper" && computerChoice == "rock" ||
+                humanChoice == "scissors" && computerChoice == "paper"
+    ) {
+        humanScore ++
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`)
+    }
+
+    else {
+        computerScore ++;
+        console.log(`You lost! ${computerChoice} beats ${humanChoice}.`)
+    }
+}
+
+playRound();
+
+
+/*
 FUNCTION playRound()
 
     IF humanChoice == computerChoice
